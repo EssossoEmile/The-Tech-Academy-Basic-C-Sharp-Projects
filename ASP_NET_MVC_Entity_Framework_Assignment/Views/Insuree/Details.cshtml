@@ -1,0 +1,50 @@
+@model CarInsurance.Models.Insuree
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Insuree</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>First Name</dt>
+        <dd>@Model.FirstName</dd>
+
+        <dt>Last Name</dt>
+        <dd>@Model.LastName</dd>
+
+        <dt>Email Address</dt>
+        <dd>@Model.EmailAddress</dd>
+
+        <dt>Date of Birth</dt>
+        <dd>@Model.DateOfBirth.ToShortDateString()</dd>
+
+        <dt>Car Year</dt>
+        <dd>@Model.CarYear</dd>
+
+        <dt>Car Make</dt>
+        <dd>@Model.CarMake</dd>
+
+        <dt>Car Model</dt>
+        <dd>@Model.CarModel</dd>
+
+        <dt>Speeding Tickets</dt>
+        <dd>@Model.SpeedingTickets</dd>
+
+        <dt>DUI</dt>
+        <dd>@Model.DUI</dd>
+
+        <dt>Coverage Type</dt>
+        <dd>@Model.CoverageType</dd>
+
+        <dt>Quote ($)</dt>
+        <dd>@Model.Quote</dd>
+    </dl>
+</div>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
